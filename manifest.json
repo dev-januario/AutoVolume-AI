@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "AutoVolume AI (protótipo)",
+  "version": "0.1",
+  "description": "Equaliza picos de áudio automaticamente em vídeos (protótipo).",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AutoVolume AI"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
